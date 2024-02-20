@@ -1,44 +1,43 @@
 import Image from "next/image";
 import Head from "next/head"
 export default function Home() {
-  return (
-<>
-      <Head>
-        <title>BinauralS4</title>
-      </Head>
-      <div className="max-w-4xl mx-auto px-4 py-8">
-      <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold">Binaural Audio Synthesis with the Structured State Space sequence model</h2>
-          <p className="text-md mt-2">by Kentaro Kitamura</p>
-        </div>
-        <h1 className="text-3xl font-bold text-center mb-4">About BinauralS4</h1>
-        <p className="text-lg text-justify mb-4 mx-3">
-          The structured state-space sequence model (S4) is a recent innovation in sequence modeling that has shown excellent performance in handling long-range dependencies across a variety of tasks and modalities. In the field of speech processing, it has been found to be an alternative to the self-attention model in automatic speech recognition and in speech synthesis. In this study, a new model for synthesizing binaural speech is developed that represents the long relationship between mono speech using S4 and the latent state space between speaker and source location information. Each layer is conditioned with information common to both left and right sides of the speech, which is processed by location, binaural time difference, and pre-trained binaural speech. Compared to conventional methods, our model shows that speech synthesis is possible with similar quality. These results indicate that our model has the potential to extend the applicability of S4 in sequence modeling and into the domain of conditional speech synthesis.
-        </p>
-        <div>
-          <h2 className="text-2xl font-semibold mb-4 mx-3">Listen to the Audio Samples</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-items-center">
-          <AudioSample title="Mono" src="/mono.wav" />
-          <AudioSample title="Test" src="/test.wav" />
-          <AudioSample title="DSP" src="/dsp.wav" />
-          <AudioSample title="ConvNet" src="/convnet.wav" />
-          <AudioSample title="BinauralGrad" src="/binauralgrad.wav" />
-          <AudioSample title="BinauralS4(Our)" src="/binaurals4.wav" />
-        </div>
-        </div>
+    return (
+        <>
+            <Head>
+                <title>BinauralS4</title>
+            </Head>
+            <div className="max-w-4xl mx-auto px-4 py-8">
+                <div className="text-center mb-8">
+                    <h2 className="text-2xl font-bold">Binaural Audio Synthesis with the Structured State Space sequence model</h2>
+                    <p className="text-md mt-2">by Kentaro Kitamura</p>
+                </div>
+                <h1 className="text-3xl font-bold text-center mb-4">About BinauralS4</h1>
+                <p className="text-lg text-justify mb-4 mx-3">
+                    The structured state-space sequence model (S4) is a recent innovation in sequence modeling that has shown excellent performance in handling long-range dependencies across a variety of tasks and modalities. In the field of speech processing, it has been found to be an alternative to the self-attention model in automatic speech recognition and in speech synthesis. In this study, a new model for synthesizing binaural speech is developed that represents the long relationship between mono speech using S4 and the latent state space between speaker and source location information. Each layer is conditioned with information common to both left and right sides of the speech, which is processed by location, binaural time difference, and pre-trained binaural speech. Compared to conventional methods, our model shows that speech synthesis is possible with similar quality. These results indicate that our model has the potential to extend the applicability of S4 in sequence modeling and into the domain of conditional speech synthesis.
+                </p>
+                <div>
+                    <h2 className="text-2xl font-semibold mb-4 mx-3">Listen to the Audio Samples</h2>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-items-center">
+                        <AudioSample title="Recording" src="https://storage.googleapis.com/mos_example/mos/base/subject1.wav" />
+                        <AudioSample title="DSP" src="https://storage.googleapis.com/mos_example/mos/geowarp/subject1.wav" />
+                        <AudioSample title="ConvNet" src="https://storage.googleapis.com/mos_example/mos/warpnet/subject1.wav" />
+                        <AudioSample title="BinauralGrad" src="https://storage.googleapis.com/mos_example/mos/binauralgrad/subject1.wav" />
+                        <AudioSample title="BinauralS4(Our)" src="https://storage.googleapis.com/mos_example/mos/binaurals4/subject1.wav" />
+                    </div>
+                </div>
 
-      </div>
-    </>
-  );
+            </div>
+        </>
+    );
 }
 
 function AudioSample({ title, src }) {
-  return (
-    <div className="flex flex-col items-center">
-      <h3 className="text-xl font-medium mb-2">{title}</h3>
-      <audio controls src={src}>
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-  );
+    return (
+        <div className="flex flex-col items-center">
+            <h3 className="text-xl font-medium mb-2">{title}</h3>
+            <audio controls src={src}>
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    );
 }
