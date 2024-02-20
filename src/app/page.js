@@ -29,7 +29,7 @@ export default function Home() {
                     <table className="table-auto w-full mb-12">
                         <caption className="text-lg font-semibold">Differences in performance by model</caption>
                         <thead>
-                            <tr className="bg-gray-100">
+                            <tr className="">
                                 <th>Models</th>
                                 <th>L2(&times;10<sup>-3</sup>)</th>
                                 <th>Amp</th>
@@ -45,7 +45,7 @@ export default function Home() {
                                 <td>1.584</td>
                                 <td>2.140</td>
                             </tr>
-                            <tr className="bg-gray-50">
+                            <tr className="">
                                 <td>Warpnet</td>
                                 <td>0.144</td>
                                 <td>0.036</td>
@@ -59,7 +59,7 @@ export default function Home() {
                                 <td>0.837</td>
                                 <td><strong>1.282</strong></td>
                             </tr>
-                            <tr className="bg-gray-50">
+                            <tr className="">
                                 <td><strong>Ours</strong></td>
                                 <td><strong>0.121</strong></td>
                                 <td>0.032</td>
@@ -71,7 +71,7 @@ export default function Home() {
                     <table className="table-auto w-full">
                         <caption className="text-lg font-semibold">Comparison by model trained with half the training data</caption>
                         <thead>
-                            <tr className="bg-gray-100">
+                            <tr className="">
                                 <th>Models</th>
                                 <th>L2(&times;10<sup>-3</sup>)</th>
                                 <th>Amp</th>
@@ -87,7 +87,7 @@ export default function Home() {
                                 <td>1.080</td>
                                 <td><strong>1.251</strong></td>
                             </tr>
-                            <tr className="bg-gray-50">
+                            <tr className="">
                                 <td><strong>Ours</strong></td>
                                 <td><strong>0.126</strong></td>
                                 <td><strong>0.032</strong></td>
