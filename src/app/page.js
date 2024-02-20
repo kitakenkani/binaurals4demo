@@ -25,9 +25,9 @@ export default function Home() {
                         <AudioSample title="BinauralS4(Our)" src="https://storage.googleapis.com/mos_example/mos/binaurals4/subject1.wav" />
                     </div>
                 </div>
-                <div className="overflow-x-auto">
-                    <table className="table-auto w-full mb-8">
-                        <caption className="text-lg font-semibold">モデルによる性能の違い</caption>
+                <div className="overflow-x-auto mt-12">
+                    <table className="table-auto w-full mb-12">
+                        <caption className="text-lg font-semibold">Differences in performance by model</caption>
                         <thead>
                             <tr className="bg-gray-100">
                                 <th>Models</th>
@@ -69,7 +69,7 @@ export default function Home() {
                         </tbody>
                     </table>
                     <table className="table-auto w-full">
-                        <caption className="text-lg font-semibold">トレーニングデータを半分にして学習したモデルによる比較</caption>
+                        <caption className="text-lg font-semibold">Comparison by model trained with half the training data</caption>
                         <thead>
                             <tr className="bg-gray-100">
                                 <th>Models</th>
